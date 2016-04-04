@@ -1,0 +1,110 @@
+/* Classes: numbered */ 
+/* IDs: oceans, oceanlist, numbered, parent-div, forward, back */ 
+
+
+
+/* Numbered paragraphs */
+
+
+h3.numbered { counter-reset: mynum; }
+
+
+p.numbered::before { 
+	content: counter(mynum) ": ";
+	counter-increment: mynum;
+	font-weight: bold;
+}
+
+
+
+/* Ordered list */
+
+
+ol > li {
+	list-style: lower-roman;
+	margin-bottom: 8px;	
+}
+
+
+
+/* Numbered headings */
+
+
+body {
+	counter-reset: headnum;
+}
+
+
+h3::before {
+	content: "(" counter(headnum, upper-latin) ") ";
+	counter-increment: headnum;
+} 
+
+
+
+/* Paddings, borders and margins */
+
+
+h3 {
+	border-top: 3px solid grey; 
+	text-align: center;
+	clear: left;
+}
+
+
+#oceanlist {
+	border: 10px double #00a;
+	padding-top: 0.5em;
+	padding-right: 0.5em;
+}	
+	
+
+
+/* Layout */
+
+
+ol, #numbered {
+	border: 1em solid #69b;
+	float: left;
+}
+
+
+p.numbered {
+	text-indent: 2em;
+}
+
+
+/* Show positioning */ 
+
+#parent-div {
+	font: bold 200% sans-serif;
+	border-top: 0.1em dotted green;
+	position: relative;
+	top: 200px;
+}
+
+
+#forward, #back {
+	position: absolute;
+	margin: 0px; /* no margin around the elements */
+	top: 0px;
+	left: 0px;
+}
+
+
+#forward {
+	color: #f00;
+}
+
+
+#back {
+	color: #00f;
+}
+
+
+#circle {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	
+}

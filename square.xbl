@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE bindings>
+
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<binding id="square">
+		<resources>
+			<stylesheet src="bind6.css"/>
+		</resources>
+
+		<content>
+			<html:div anonid="square"/>
+		
+			<xul:button anonid="button" type="button">
+				<children/>
+			</xul:button>
+		</content>
+
+		<implementation>
+			<field name="square"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "square")
+			]]></field>
+
+			<field name="button"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "button")
+			]]></field>	
+
+			<method name="doDemo">
+				<body><![CDATA[
+					this.square.style.backgroundColor = "#cf4"
+					this.square.style.width = "200%"
+					this.button.setAttribute("disabled", "true")
+					setTimeout(this.clearDemo, 2000, this)
+				]]></body>
+			</method>
+
+			<method name="clearDemo">
+				<parameter name="me"/>
+
+				<body><![CDATA[
+					me.square.style.backgroundColor = "transparent"
+					me.square.style.marginLeft = "0" 
+					me.button.removeAttribute("disabled")
+				]]></body>
+			</method>
+		</implementation>
+	
+		<handlers>
+			<handler event="click" button="0"><![CDATA[
+				if (event.originalTarget == this.button) 
+					this.doDemo()
+			]]></handler>
+		</handlers>
+	</binding>
+</bindings>
+

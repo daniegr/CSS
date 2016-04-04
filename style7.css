@@ -1,0 +1,104 @@
+/*** XUL demonstration ***/
+
+
+
+window {
+	-moz-box-align: start;
+	background-color: -moz-dialog;
+  	font: -moz-dialog;
+	padding: 2em;
+}
+
+
+
+.head-1 {
+	font-weight: bold;
+	font-size: 200%;
+  	padding-left: 5px;
+}
+
+
+
+/** The group box **/
+
+
+.demo-group {
+  	padding: 1em;
+}
+
+
+.demo-group grid {
+ 	 margin-bottom: 1em;
+}
+
+
+.demo-group column {
+	  margin-right: .5em;
+}
+
+
+.demo-group row {
+	  margin-bottom: .5em;
+}
+
+
+.demo-group .buttons {
+	  -moz-box-pack: end;
+}
+
+
+
+/** The day-of-week labels **/
+.day {
+	  margin-left: 1em;
+}
+
+
+.day[disabled] {
+	  color: #777;
+}
+
+
+.day:first-child {
+	  margin-left: 4px;
+}
+
+
+
+/** The left column labels **/
+
+
+.text-prompt {
+	  padding-top: .25em;
+}
+
+
+
+/** The date input box **/
+
+
+#date-text {
+	  max-width: 8em;
+}
+
+
+
+/** The status bar **/
+
+
+statusbar {
+	  width: 100%;
+  	border: 1px inset -moz-dialog;
+  	margin: 4px;
+  	padding: 0px 4px;
+}
+
+
+#status {
+	  padding: 4px;
+}
+
+
+#status[warning] {
+	  color: red;
+}

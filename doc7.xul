@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" href="style7.css"?>
+
+
+<!DOCTYPE window>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  	title="CSS Getting Started - XUL demonstration"
+  	onload="init();">
+
+	<script type="application/javascript" src="script7.js"/>
+
+	<label class="head-1" value="XUL demonstration"/>
+
+	<vbox>
+		<groupbox class="demo-group">
+			<caption label="Day of week calculator"/>
+    		
+			<grid>
+      				<columns>
+        				<column/>
+        			
+					<column/>
+      	  			</columns>
+      
+				<rows>
+        				<row>
+          					<label class="text-prompt" value="Date:" accesskey="D" control="date-text"/>
+          					<textbox id="date-text" type="timed" timeout="750" oncommand="refresh();"/>
+        	  			</row>
+        	
+					<row>
+          					<label value="Day:"/>
+          				
+						<hbox id="day-box">
+							<label class="day" value="Sunday" disabled="true"/>
+            
+							<label class="day" value="Monday" disabled="true"/>
+            
+							<label class="day" value="Tuesday" disabled="true"/>
+            
+							<label class="day" value="Wednesday" disabled="true"/>
+            
+							<label class="day" value="Thursday" disabled="true"/>
+            
+							<label class="day" value="Friday" disabled="true"/>
+            
+							<label class="day" value="Saturday" disabled="true"/>
+            					</hbox>
+          				</row>
+        			</rows>
+      			</grid>
+    	
+			<hbox class="buttons">
+      				<button id="clear" label="Clear" accesskey="C" oncommand="clearDate();"/>
+      
+				<button id="today" label="Today" accesskey="T" oncommand="setToday();"/>
+			</hbox>
+		</groupbox>
+
+		<statusbar>
+    			<statusbarpanel id="status"/>
+	    	</statusbar>
+
+	</vbox>
+</window>

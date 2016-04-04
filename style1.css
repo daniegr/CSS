@@ -1,0 +1,101 @@
+/* Rules for classes */
+
+<!--All elements of class "key"-->
+.key { color: #f00; }
+
+<!--Only p elements of class "key"-->
+p.key { color: #0f0; }
+
+.carrot { color: orange; }
+
+.spinach { color: #080; }
+
+li.open { list-style: circle; }
+
+li.closed { list-style: disc; }
+
+ol.info { list-style: decimal; }
+
+/* Pseudo-class example */
+a.homepage:link, a.homepage:visited { 
+	padding: 1px 10px 1 px 10 px;
+	color: #fff;
+	background: #555;
+	border-radius: 3px;
+	border: 1px outset rgba(50,50,50,0.5);
+	font-family: georgia, serif;
+	font-size: 14px;
+	font-style: italic;
+	text-decoration: none; 
+}
+
+a.homepage:hover, a.homepage:focus, a.homepage:active { background-color: #888; }
+
+div.menu-bar ul ul { display: none; }
+
+div.menu-bar li:hover > ul { display: block; }
+
+
+
+/* Rules for IDs */
+
+#principal { font-weight: bolder; }
+
+#data-table-1 tr:first-child { color: pink; }
+
+#data-table-1 td:first-child { text-decoration: underline; }
+
+#data-table-1 td:first-child + td { text-decoration: line-through; }
+
+#first { font-style: italic; }
+
+#second { color: #00f;}
+	
+
+
+/* Rules for tags/types */
+
+/* Rule for setting the font of the document (head) to Arial */
+body {
+	font: 16px "Arial", cursive;
+	background: url("background.jpg") no-repeat;
+	counter-reset: mynum;
+}
+
+p {
+	color: #00f; 
+	font: italic 75%/125% "Times New Roman", "Comic Sans MS", cursive;
+}
+
+strong {
+	color: #f00; 
+	background-color: #ddf;
+	text-decoration: underline;
+	font: 200% serif;
+}
+
+i {color: orange; }
+
+
+
+/* Content */
+
+/* Content (image) appended at the start of the elements p */
+#first::before {
+	content: url("circle.png"); /* TODO: Find out how to change size */
+}
+
+
+
+
+/* Others */
+
+body {
+	counter-reset: mynum;
+}
+	
+p.numbered::before {
+	content: counter(mynum) ": ";
+	counter-increment: mynum;
+	font-weight: bold;
+}

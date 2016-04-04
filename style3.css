@@ -1,0 +1,121 @@
+/*** Style for doc3.html (Tables) ***/
+
+
+
+#demo-table {
+	font: 100% sans-serif;
+	background-color: #efe;
+	border-collapse: collapse;
+	empty-cells: show;
+	border: 2px solid #7a7;
+}
+
+
+#demo-table > caption {
+	caption-side: bottom;
+	text-align: right;
+	font-style: italic;
+	font-size: 100%;
+	border-top: 0.3em solid #4ca;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+}
+
+
+
+/** Basic shared rules **/
+
+
+#demo-table th, #demo-table td {
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+
+#demo-table th {
+	font-weight: bold;
+	padding-left: 0.5em;
+	text-align: left;
+}
+
+
+#demo-table th, td {
+	border: solid 1px;
+	border-color: black;
+}
+
+
+
+/** Header **/
+
+
+/* E:first-child: E-element som er første chiild av sin parent */
+#demo-table > thead > tr:first-child > th {
+	color: blue;
+
+}
+
+
+/* (A > E): E er child av A, (B + E): E som er neste søsken til B */ 
+#demo-table > thead > tr + tr > th {  
+	font-style: italic;
+	color: grey;
+}
+
+
+
+/** Fix size of superscript **/
+
+
+#demo-table sup {
+	font-size: 75%;
+}
+
+
+
+/** Body **/
+
+
+#demo-table td {
+	background-color: #cef;
+	padding: 0.5em, 0.5em, 0.5em, 3em;
+}
+
+#demo-table tbody th:after {
+	content: ":";	
+}
+
+
+
+/** Footer **/
+
+
+#demo-table tfoot {
+	font-weight: bold;
+}
+
+
+#demo-table tfoot th {
+	color: blue;
+}
+
+
+#demo-table tfoot th:after {
+	content: ":";
+}
+
+
+#demo-table > tfoot td {
+	background-color: #cee;
+}
+
+
+#demo-table > tfoot > tr:first-child td {
+	border-top: 0.2em solid #7a7;
+}
+
+
+/* Empty row style */
+#emptyrow {
+	height: 1.5em;
+}

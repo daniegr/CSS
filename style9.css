@@ -1,0 +1,75 @@
+/*** XML demonstration ***/
+
+
+
+planet:before {
+	display: table-caption;
+	width: 8em;
+	font-weight: bold;
+	font-size: 200%;
+	content: "Oceans";
+	margin: -0.75em 0px 0.25em -0.25em;
+	padding: 0.1em 0.25em;
+	background-color: #cdf;
+}
+
+
+
+planet {
+	display: table;
+	margin: 2em 1em;
+	border: 4px solid #cdf;
+	padding: 0px 1em;
+	background-color: white;	
+}
+
+
+
+ocean {
+	display: table;
+	margin-bottom: 1em;
+}
+
+
+
+name {
+	display: table;
+	font-weight: bold;
+	font-size: 150%;
+}
+
+
+
+area {
+	display: table;
+}
+
+
+
+area:before {
+	content: "Area: ";
+}
+
+
+
+area:after {
+	content: " million km\B2";
+}
+
+
+
+depth {
+	display: table;
+}
+
+
+
+depth:before {
+	content: "Mean depth: ";
+}
+
+
+
+depth:after {
+	content: " m";
+}

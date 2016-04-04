@@ -1,0 +1,7 @@
+/*** XBL demonstration ***/
+
+
+
+#square {
+	-moz-binding: url("square.xbl#square");
+}
